@@ -15,10 +15,10 @@ jsMin = (cb)=>{
 }
 
 cssMin = (cb)=>{
-    gulp.src("./src/styles/*.styles")
+    gulp.src("./src/css/*.css")
         .pipe(cleanCss())
-        .pipe(gulp.dest("./dist/styles/"))
-        .pipe(gulp.dest( './src/styles/style.min.css'));
+        .pipe(gulp.dest("./dist/css/"))
+        .pipe(gulp.dest( './src/css/style.min.css'));
     cb();
 }
 
@@ -32,8 +32,8 @@ htmlMin = (cb)=>{
 sassCom = (cb) => {
     gulp.src('./src/sass/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest( './src/styles/style.min.css'))
-        .pipe(gulp.dest('./dist/styles/' ));
+        .pipe(gulp.dest( './src/css/style.min.css'))
+        .pipe(gulp.dest('./dist/css/' ));
     cb();
 }
 
